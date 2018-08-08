@@ -1,11 +1,28 @@
-var express = require('express')
-
+var express = require("express");
 var router = express.Router();
 
 // import the model (burger.js) to use its db functions
-var burger = require("/models/burger.js")
+var burger = require("../models/burger.js");
 
 // create all our routes and set the logic with in those routes where rewuired
-router.get("/", function(req, res){
-
+router.get("/", function(req, res) {
+  burger.all(function(burger_data) {
+    console.log(burger_data);
+    res.render("index", { burger_data });
+  });
 });
+
+router.put("/burgers/update", function(req, res) {
+  burger.update(req.body_id, function(result) {
+    console.log(result);
+    res.redirect("/");
+  });
+});
+
+router.post("/burgers/create", function(req, res) {
+  burger.create(req.body.burger_name, function(result) {
+    res.redirect("/");
+  });
+});
+
+module.exports = router;

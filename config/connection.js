@@ -1,5 +1,5 @@
 // set up mysql connection
-var mysql = requie("mysql");
+var mysql = require("mysql");
 
 var connection = mysql.createConnection({
   host: "localhost",
