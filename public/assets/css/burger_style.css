@@ -1,3 +1,21 @@
 h1 {
     text-align: center;
+    
+}
+body {
+    background-color: rgb(255,234,167)
+}
+
+#submitBtn{
+    text-align: center;
+    
+}
+
+#eatBtn{
+    text-align: center;
+   
+}
+
+p{
+    font-family: 'Pacifico';
 }
