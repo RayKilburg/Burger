@@ -9,5 +9,5 @@
 * User will have the option to delete burgers from the data base
 
 <h2>Heroku Link: </h2> 
-https://warm-citadel-55839.herokuapp.com/
+https://burgerrk.herokuapp.com/
 
